@@ -8,13 +8,7 @@ class TodoInput extends Component {
       inputText: ''
     }
   }
-
-  deleteLetter() {
-    this.setState({
-      inputText: this.state.inputText.substring(0, this.state.inputText.length - 1)
-    })
-  }
-
+  
   handleChange(event) {
     this.setState({
       inputText: event.target.value
@@ -22,12 +16,12 @@ class TodoInput extends Component {
   }
 
   handleSubmit(event) {
-    event.preventDefault()
+    event.preventDefault();
     if (this.state.inputText.trim().length !== 0) {
-        this.props.actions.addTodo(this.state.inputText)
+        this.props.actions.addTodo(this.state.inputText);
         this.setState({
             inputText: ''
-        })
+        });
     }
     document.getElementById("todoInput").focus();
   }

@@ -7,11 +7,11 @@ import { Provider } from 'react-redux'
 // configure and create our store
 // createStore(reducers, initialState) // []
 let initialState = {
-    todos: [{
-        id: 0,
-        completed: false,
-        text: 'Initial todo test'
-    }]
+    todos: [],
+    user : {
+        username: 'vincent',
+        id: 11
+    }
 }
 
 let store = configureStore(initialState)
